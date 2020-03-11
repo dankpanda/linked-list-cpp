@@ -6,6 +6,7 @@ using namespace std;
 template <class T>
 class LinkedList
 {
+    // Creating struct node
     struct node
     {
         T data;
@@ -15,6 +16,7 @@ class LinkedList
     private:
     node *head, *tail;
     
+    // Constructor
     public:
     LinkedList()
     {
@@ -23,6 +25,7 @@ class LinkedList
         menu();
     }
     
+    // Create new node method
     void createnode(T data)
     {
         node *temp = new node;
@@ -42,6 +45,7 @@ class LinkedList
         }
     }
     
+    // Delete method
     void delete_at_index(int index)
     {
         if(index < size()){
@@ -60,6 +64,7 @@ class LinkedList
         } else cout << "There is no element at that index value " << endl;
     }
     
+    // Display method
     void display()
     {
         node *temp = new node;
@@ -73,6 +78,7 @@ class LinkedList
         cout << "\n";
     }
     
+    // Get method
     void get(int index)
     {
         node *temp = new node;
@@ -88,6 +94,7 @@ class LinkedList
         else cout << "There is not enough element for this index value" << endl;
     }
     
+    // Size method
     int size()
     {
         node *temp = new node;
@@ -102,6 +109,7 @@ class LinkedList
         return counter;
     }
     
+    // User interface
     void menu(){
         int user_input;
         
