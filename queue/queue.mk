@@ -3,18 +3,18 @@
 ## any manual changes will be erased      
 ##
 ## Debug
-ProjectName            :=LinkedList-Stack
+ProjectName            :=queue
 ConfigurationName      :=Debug
 WorkspaceConfiguration := $(ConfigurationName)
 WorkspacePath          :=C:/Users/yowen/Documents/C++
-ProjectPath            :=C:/Users/yowen/Documents/C++/gakngerti
-IntermediateDirectory  :=../build-$(ConfigurationName)/gakngerti
-OutDir                 :=../build-$(ConfigurationName)/gakngerti
+ProjectPath            :=C:/Users/yowen/Documents/C++/queue
+IntermediateDirectory  :=../build-$(ConfigurationName)/queue
+OutDir                 :=../build-$(ConfigurationName)/queue
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=yowen
-Date                   :=09/03/2020
+Date                   :=11/03/2020
 CodeLitePath           :="C:/Program Files/CodeLite"
 LinkerName             :=C:/mingw-w64/mingw64/bin/g++.exe
 SharedObjectLinkerName :=C:/mingw-w64/mingw64/bin/g++.exe -shared -fPIC
@@ -62,7 +62,7 @@ AS       := C:/mingw-w64/mingw64/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=../build-$(ConfigurationName)/gakngerti/main.cpp$(ObjectSuffix) 
+Objects0=../build-$(ConfigurationName)/queue/main.cpp$(ObjectSuffix) 
 
 
 
@@ -74,18 +74,18 @@ Objects=$(Objects0)
 .PHONY: all clean PreBuild PrePreBuild PostBuild MakeIntermediateDirs
 all: MakeIntermediateDirs $(OutputFile)
 
-$(OutputFile): ../build-$(ConfigurationName)/gakngerti/.d $(Objects) 
-	@if not exist "..\build-$(ConfigurationName)\gakngerti" mkdir "..\build-$(ConfigurationName)\gakngerti"
+$(OutputFile): ../build-$(ConfigurationName)/queue/.d $(Objects) 
+	@if not exist "..\build-$(ConfigurationName)\queue" mkdir "..\build-$(ConfigurationName)\queue"
 	@echo "" > $(IntermediateDirectory)/.d
 	@echo $(Objects0)  > $(ObjectsFileList)
 	$(LinkerName) $(OutputSwitch)$(OutputFile) @$(ObjectsFileList) $(LibPath) $(Libs) $(LinkOptions)
 
 MakeIntermediateDirs:
-	@if not exist "..\build-$(ConfigurationName)\gakngerti" mkdir "..\build-$(ConfigurationName)\gakngerti"
+	@if not exist "..\build-$(ConfigurationName)\queue" mkdir "..\build-$(ConfigurationName)\queue"
 	@if not exist ""..\build-$(ConfigurationName)\bin"" mkdir ""..\build-$(ConfigurationName)\bin""
 
-../build-$(ConfigurationName)/gakngerti/.d:
-	@if not exist "..\build-$(ConfigurationName)\gakngerti" mkdir "..\build-$(ConfigurationName)\gakngerti"
+../build-$(ConfigurationName)/queue/.d:
+	@if not exist "..\build-$(ConfigurationName)\queue" mkdir "..\build-$(ConfigurationName)\queue"
 
 PreBuild:
 
@@ -93,16 +93,16 @@ PreBuild:
 ##
 ## Objects
 ##
-../build-$(ConfigurationName)/gakngerti/main.cpp$(ObjectSuffix): main.cpp ../build-$(ConfigurationName)/gakngerti/main.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/yowen/Documents/C++/gakngerti/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
-../build-$(ConfigurationName)/gakngerti/main.cpp$(DependSuffix): main.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT../build-$(ConfigurationName)/gakngerti/main.cpp$(ObjectSuffix) -MF../build-$(ConfigurationName)/gakngerti/main.cpp$(DependSuffix) -MM main.cpp
+../build-$(ConfigurationName)/queue/main.cpp$(ObjectSuffix): main.cpp ../build-$(ConfigurationName)/queue/main.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/yowen/Documents/C++/queue/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
+../build-$(ConfigurationName)/queue/main.cpp$(DependSuffix): main.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT../build-$(ConfigurationName)/queue/main.cpp$(ObjectSuffix) -MF../build-$(ConfigurationName)/queue/main.cpp$(DependSuffix) -MM main.cpp
 
-../build-$(ConfigurationName)/gakngerti/main.cpp$(PreprocessSuffix): main.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) ../build-$(ConfigurationName)/gakngerti/main.cpp$(PreprocessSuffix) main.cpp
+../build-$(ConfigurationName)/queue/main.cpp$(PreprocessSuffix): main.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) ../build-$(ConfigurationName)/queue/main.cpp$(PreprocessSuffix) main.cpp
 
 
--include ../build-$(ConfigurationName)/gakngerti//*$(DependSuffix)
+-include ../build-$(ConfigurationName)/queue//*$(DependSuffix)
 ##
 ## Clean
 ##

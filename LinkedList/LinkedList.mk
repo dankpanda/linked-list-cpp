@@ -3,18 +3,18 @@
 ## any manual changes will be erased      
 ##
 ## Debug
-ProjectName            :=LinkedList-Queue
+ProjectName            :=LinkedList
 ConfigurationName      :=Debug
 WorkspaceConfiguration := $(ConfigurationName)
 WorkspacePath          :=C:/Users/yowen/Documents/C++
-ProjectPath            :=C:/Users/yowen/Documents/C++/LinkedList-Queue
-IntermediateDirectory  :=../build-$(ConfigurationName)/LinkedList-Queue
-OutDir                 :=../build-$(ConfigurationName)/LinkedList-Queue
+ProjectPath            :=C:/Users/yowen/Documents/C++/LinkedList
+IntermediateDirectory  :=../build-$(ConfigurationName)/LinkedList
+OutDir                 :=../build-$(ConfigurationName)/LinkedList
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=yowen
-Date                   :=09/03/2020
+Date                   :=11/03/2020
 CodeLitePath           :="C:/Program Files/CodeLite"
 LinkerName             :=C:/mingw-w64/mingw64/bin/g++.exe
 SharedObjectLinkerName :=C:/mingw-w64/mingw64/bin/g++.exe -shared -fPIC
@@ -62,7 +62,7 @@ AS       := C:/mingw-w64/mingw64/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=../build-$(ConfigurationName)/LinkedList-Queue/main.cpp$(ObjectSuffix) 
+Objects0=../build-$(ConfigurationName)/LinkedList/main.cpp$(ObjectSuffix) 
 
 
 
@@ -74,18 +74,18 @@ Objects=$(Objects0)
 .PHONY: all clean PreBuild PrePreBuild PostBuild MakeIntermediateDirs
 all: MakeIntermediateDirs $(OutputFile)
 
-$(OutputFile): ../build-$(ConfigurationName)/LinkedList-Queue/.d $(Objects) 
-	@if not exist "..\build-$(ConfigurationName)\LinkedList-Queue" mkdir "..\build-$(ConfigurationName)\LinkedList-Queue"
+$(OutputFile): ../build-$(ConfigurationName)/LinkedList/.d $(Objects) 
+	@if not exist "..\build-$(ConfigurationName)\LinkedList" mkdir "..\build-$(ConfigurationName)\LinkedList"
 	@echo "" > $(IntermediateDirectory)/.d
 	@echo $(Objects0)  > $(ObjectsFileList)
 	$(LinkerName) $(OutputSwitch)$(OutputFile) @$(ObjectsFileList) $(LibPath) $(Libs) $(LinkOptions)
 
 MakeIntermediateDirs:
-	@if not exist "..\build-$(ConfigurationName)\LinkedList-Queue" mkdir "..\build-$(ConfigurationName)\LinkedList-Queue"
+	@if not exist "..\build-$(ConfigurationName)\LinkedList" mkdir "..\build-$(ConfigurationName)\LinkedList"
 	@if not exist ""..\build-$(ConfigurationName)\bin"" mkdir ""..\build-$(ConfigurationName)\bin""
 
-../build-$(ConfigurationName)/LinkedList-Queue/.d:
-	@if not exist "..\build-$(ConfigurationName)\LinkedList-Queue" mkdir "..\build-$(ConfigurationName)\LinkedList-Queue"
+../build-$(ConfigurationName)/LinkedList/.d:
+	@if not exist "..\build-$(ConfigurationName)\LinkedList" mkdir "..\build-$(ConfigurationName)\LinkedList"
 
 PreBuild:
 
@@ -93,16 +93,16 @@ PreBuild:
 ##
 ## Objects
 ##
-../build-$(ConfigurationName)/LinkedList-Queue/main.cpp$(ObjectSuffix): main.cpp ../build-$(ConfigurationName)/LinkedList-Queue/main.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/yowen/Documents/C++/LinkedList-Queue/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
-../build-$(ConfigurationName)/LinkedList-Queue/main.cpp$(DependSuffix): main.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT../build-$(ConfigurationName)/LinkedList-Queue/main.cpp$(ObjectSuffix) -MF../build-$(ConfigurationName)/LinkedList-Queue/main.cpp$(DependSuffix) -MM main.cpp
+../build-$(ConfigurationName)/LinkedList/main.cpp$(ObjectSuffix): main.cpp ../build-$(ConfigurationName)/LinkedList/main.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/yowen/Documents/C++/LinkedList/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
+../build-$(ConfigurationName)/LinkedList/main.cpp$(DependSuffix): main.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT../build-$(ConfigurationName)/LinkedList/main.cpp$(ObjectSuffix) -MF../build-$(ConfigurationName)/LinkedList/main.cpp$(DependSuffix) -MM main.cpp
 
-../build-$(ConfigurationName)/LinkedList-Queue/main.cpp$(PreprocessSuffix): main.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) ../build-$(ConfigurationName)/LinkedList-Queue/main.cpp$(PreprocessSuffix) main.cpp
+../build-$(ConfigurationName)/LinkedList/main.cpp$(PreprocessSuffix): main.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) ../build-$(ConfigurationName)/LinkedList/main.cpp$(PreprocessSuffix) main.cpp
 
 
--include ../build-$(ConfigurationName)/LinkedList-Queue//*$(DependSuffix)
+-include ../build-$(ConfigurationName)/LinkedList//*$(DependSuffix)
 ##
 ## Clean
 ##
